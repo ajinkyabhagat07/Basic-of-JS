@@ -1,6 +1,6 @@
 const factorial = (a) => {
     if(a == 0 || a == 1){
-        return a;
+        return 1;
     }
 
     num = a * factorial(a-1);
