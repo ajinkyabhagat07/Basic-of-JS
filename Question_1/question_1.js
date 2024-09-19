@@ -1,11 +1,10 @@
-const factorial = (a) => {
-    if(a == 0 || a == 1){
+const calculateFactorial = (number) => {
+    if (number === 0 || number === 1) {
         return 1;
     }
 
-    num = a * factorial(a-1);
-    return num;
+    const result = number * calculateFactorial(number - 1);
+    return result;
 }
 
-
-console.log(factorial(5));
+console.log(calculateFactorial(5));

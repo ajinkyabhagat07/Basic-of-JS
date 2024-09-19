@@ -1,28 +1,27 @@
-const fibonnacci = (a) => {
-    if(a == 0 || a == 1){
-        return a;
+const calculateFibonacci = (number) => {
+    if (number === 0 || number === 1) {
+        return number;
     }
 
-    num = fibonnacci(a-1) + fibonnacci(a-2);
+    const result = calculateFibonacci(number - 1) + calculateFibonacci(number - 2);
 
-    return num;
+    return result;
 }
 
 
-const printFibonacci = (limit) => {
-    let n = 0;
-    let fibNum;
+const printFibonacciSequence = (limit) => {
+    let index = 0;
+    let fibonacciNumber;
     
     while (true) {
-        fibNum = fibonnacci(n);
-        if (fibNum > limit) {
+        fibonacciNumber = calculateFibonacci(index);
+        if (fibonacciNumber > limit) {
             break;
         }
-        console.log(fibNum);
-        n++; 
+        console.log(fibonacciNumber);
+        index++; 
     }
 };
 
-printFibonacci(5000);
-
+printFibonacciSequence(5000);
 //0 1 1 2 3 5 8 13

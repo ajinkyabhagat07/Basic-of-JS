@@ -1,25 +1,27 @@
-const evenOddZero = (a) => {
+const countEvenOddZero = (array) => {
     let zeroCount = 0;
     let evenCount = 0;
     let oddCount = 0;
-    for(let i=0; i<a.length; i++){
-        if(typeof a[i] == 'number'){
-            if(a[i] === 0){
+
+    for (let i = 0; i < array.length; i++) {
+        if (typeof array[i] === 'number') {
+            if (array[i] === 0) {
                 zeroCount++;
-            }else if(a[i]%2 === 0){
+            } else if (array[i] % 2 === 0) {
                 evenCount++;
-            }else{
+            } else {
                 oddCount++;
             }
         }
     }
 
-    return {"zeroCount " : zeroCount,
-            "evenCount " : evenCount ,
-            "oddCount " : oddCount};
+    return {
+        zeroCount: zeroCount,
+        evenCount: evenCount,
+        oddCount: oddCount
+    };
 }
 
-let a = [0 , 1 , 3 , 5 , 7 , "run"];
+let inputArray = [0, 1, 3, 5, 7, "run"];
 
-console.log(evenOddZero(a));
-
+console.log(countEvenOddZero(inputArray));

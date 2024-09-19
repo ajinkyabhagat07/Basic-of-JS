@@ -1,10 +1,13 @@
-const primeOrNot = (a) => {
-    if(a < 2){
+
+
+
+const isPrime = (number) => {
+    if (number < 2) {
         return false;
     }
 
-    for(let i = 2; i<a; i++){
-        if(a%i == 0){
+    for (let i = 2; i < number; i++) {
+        if (number % i === 0) {
             return false;
         }
     }
@@ -12,4 +15,4 @@ const primeOrNot = (a) => {
     return true;
 }
 
-console.log(primeOrNot(9));
+console.log(isPrime(9));
